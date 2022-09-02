@@ -1,0 +1,38 @@
+------------Fluxo do sistema---------------
+
+Cadastro:
+	Você é perguntado se já possui cadastro. Se possuir, pede-se seu
+login(usuário e senha);
+	Senão, é levado a uma área de cadastro. O cadastro é feito e gravado
+na matriz cadastro;
+	
+login:
+	O login só é realizado se usuário e senha são inseridos corretamente.
+Senao for, um contador diminui. O usuário tem 4 chances de acertar, se errar essas 4
+uma mensagem aparece dizendo que o terminal precisa ser reinicializado, e o
+programa precisa ser reinicializado;
+
+idUsuario:
+	esse id é importante para vetores e matrizes que recebem informações de depósito
+e saldo, além da impressão na tela.
+
+certificar:
+	toda operação realizada pelo usuário chama essa operação para o usuário se 
+certificar de que quer realizar a operação.
+
+depósito e saque:
+	ambas imprimem um valor selecionado pelo usuario no vetor totalDisponivel e na matriz
+operacoes10, que é usado pra imprimir na tela as últimas dez operações de saque e depósito.
+No caso de depósito, se o valor for negativo, uma mensagem de erro aparece na tela e a função depósito
+é chamada novamente.
+No caso de saque, se o saldo for 0 ou o valor de saque for maior do que o saldo, uma mensagem de erro aparece
+e a função saque é chamada novamente.
+
+escolhaOpercao1 e OutraOperacao:
+	mostram na tela opções a serem selecionadas pelo usuário;
+
+ultimas10op
+	é uma função de 'extrato'
+
+O único momento em que a aplicação de caixa eletrônico é fechada é quando ligado vira falso. E só vira
+falso quando se erra mais de 3 vezes. No entanto, toda vez que se acerta o login o contador é zerado
